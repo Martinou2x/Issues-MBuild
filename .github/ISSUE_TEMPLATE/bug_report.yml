@@ -1,0 +1,48 @@
+name: 🐛 Bug Report
+description: Something isn't working? Report it here.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out this form to help us fix the issue quickly.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? What did you expect to happen?
+      placeholder: The plugin crashed my server.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Plugin Version
+      description: Which version of MBuild are you using?
+      placeholder: v1.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: server-version
+    attributes:
+      label: Server Version
+      options:
+        - Paper 1.21.x
+        - Spigot 1.21.x
+        - Paper 1.20.x
+        - Spigot 1.20.x
+        - Paper 1.19.x
+        - Other (Please specify in description)
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Console Output
+      description: Please copy and paste any relevant console errors here.
+      render: shell
